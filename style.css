@@ -1,0 +1,55 @@
+
+
+header {
+    height: 6rem;
+    background-color: rgb(158, 157, 157);
+    }
+
+.majorNav { 
+        display: flex;
+        justify-content: center;
+        }
+.myNav {
+        margin-left: 5rem;
+        margin-right: 5rem;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        }
+
+        footer {
+            height: 6rem;
+            background-color: rgb(158, 157, 157);
+            display: flex;
+            justify-content: center;
+            margin-top: 35rem;
+            }       
+
+.copyRight {
+            margin-top: 3.5rem;
+            font-size: 1rem;
+            font-weight: bolder;
+            position: absolute;
+            }
+
+            .myContact {
+                margin-left: 70rem;
+                margin-right: 5rem;
+                margin-top: 2rem;
+                font-weight: bolder;
+                font-size: 1rem;
+            }
+
+            .myImage {
+                inline-size: 75%;
+                margin-top: 1rem;
+            }
+
+.midPage {
+margin-left: 23rem;
+margin-top: 5rem;
+font-family: 'Courier New', Courier, monospace;
+font-style: oblique;
+color: rgb(30, 30, 110);
+}
+
+            
