@@ -8,14 +8,56 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
+    <header id="headerID">
         <nav class="majorNav">
             <a href="./index.html" class="myNav">Home</a>
             <a href="./accounting.html" class="myNav">Accounting</a>
           </nav>
     </header>
     <main class="midPage">
+        <section id="cardSection" class="cardSection">
+            <!-- <section class="administrationSection">
+                <h2>Administration</h2>
+            </section>
+            <section class="marketingSection">
+                <h2>Marketing</h2>
+            </section>
+            <section class="developmentSection">
+                <h2>Development</h2>
+            </section>
+            <section class="financeSection">
+                <h2>Finance</h2>
+            </section> -->
+        </section>
+        <section id="formSection" class="formSection">
         <script src="./app.js"></script>
+        <form id="form">
+            <h1>Form</h1>
+
+            <label for="fname">Full name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+
+            <label for="department">Department:</label>
+            <select id="department" name="department">
+            <option value="administration">Administration</option>
+            <option value="marketing">Marketing</option>
+            <option value="development">Development</option>
+            <option value="finance">Finance</option>
+            </select><br><br>
+
+            <label for="level">Level:</label>
+            <select id="level" name="level">
+            <option value="junior">Junior</option>
+            <option value="mid-Senior">Mid-Senior</option>
+            <option value="senior">Senior</option>
+            </select><br><br>
+
+            <label for="imgUrl">Image url:</label>
+            <input type="text" id="imgUrl" name="imgUrl"><br><br>
+            <input type="submit" value="Submit">
+          </form>
+        </section>
+
     </main>
     <footer>
         <p class="myContact">Contact me on</p>
