@@ -2,7 +2,7 @@
 
 header {
     height: 6rem;
-    background-color: rgb(158, 157, 157);
+    background-color: #B5EAEA;
     }
 
 .majorNav { 
@@ -16,13 +16,13 @@ header {
         font-size: 1.5rem;
         }
 
-        footer {
-            height: 6rem;
-            background-color: rgb(158, 157, 157);
-            display: flex;
-            justify-content: center;
-            margin-top: 35rem;
-            }       
+footer {
+    height: 6rem;
+    background-color: #F38BA0;
+    display: flex;
+    justify-content: center;
+    /* margin-top: 35rem; */
+    }       
 
 .copyRight {
             margin-top: 3.5rem;
@@ -31,25 +31,57 @@ header {
             position: absolute;
             }
 
-            .myContact {
-                margin-left: 70rem;
-                margin-right: 5rem;
-                margin-top: 2rem;
-                font-weight: bolder;
-                font-size: 1rem;
-            }
-
-            .myImage {
-                inline-size: 75%;
-                margin-top: 1rem;
-            }
-
-.midPage {
-margin-left: 23rem;
-margin-top: 5rem;
-font-family: 'Courier New', Courier, monospace;
-font-style: oblique;
-color: rgb(30, 30, 110);
+.myContact {
+    margin-left: 70rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    font-weight: bolder;
+    font-size: 1rem;
 }
 
-            
+.myImage {
+    inline-size: 75%;
+    margin-top: 1rem;
+}
+
+.midPage {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: oblique;
+    color: rgb(30, 30, 110);
+}
+
+.cardSection {
+    padding-left: 40rem;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    background-color: #EDF6E5;
+    background-attachment: fixed;
+}
+
+.formSection {
+    padding-top: 5rem;
+    padding-left: 5rem;
+    padding-bottom: 5rem;
+    font-size: x-large;
+    color:maroon;
+    font-weight: 900;
+    border-bottom: 1rem, solid, black;
+    background-color: #FFBCBC;
+}
+
+.accounting {
+    background-color: #EDF6E5;
+    display: flex;
+    flex-direction: column;
+    padding-left: 27rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: oblique;
+    color: rgb(30, 30, 110);
+}
+
+
+
