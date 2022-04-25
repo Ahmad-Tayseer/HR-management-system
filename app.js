@@ -8,8 +8,8 @@ let sectionEl = document.getElementById("cardSection");
 // let develomentEl = document.getElementById("developmentSection");
 // let financeEl = document.getElementById("financeSection");
 let formEl = document.getElementById("formSection");
-// let accountingEl = document.getElementById("accounting");
-console.log(sectionEl);
+// console.log(sectionEl);
+let allEmployees = [];
 
 function Employee(emplyeeID, fullName, department, level, imageURL, salary) {
     this.emplyeeID = emplyeeID;
@@ -17,6 +17,8 @@ function Employee(emplyeeID, fullName, department, level, imageURL, salary) {
     this.department = department;
     this.level = level;
     this.imageURL = imageURL;
+
+    allEmployees.push(this);
 }
 
 function getRndInteger(min, max) {
@@ -34,15 +36,7 @@ Employee.prototype.salary = function () {
     console.log(this.salary);
 };
 
-// Employee.prototype.render = function () {
-//     document.write(`<h1>The Employee ${this.fullName} have a ${this.salary}$ salary. </h1>`);
-// }
-
 Employee.prototype.render = function () {
-
-    // let string = document.createElement('p');
-    // string.textContent = `<h1>The Employee ${this.fullName} have a ${this.salary}$ salary. </h1>`;
-    // accountingEl.appendChild(string);
     
     let image = document.createElement('img');
     image.src = this.imageURL;
@@ -75,15 +69,17 @@ let rana = new Employee("1005", "Rana Saleh", "Development", "Junior", "assets/R
 let hadi = new Employee("1006", "Hadi Ahmad", "Finance", "Mid-Senior", "assets/Hadi.jpg");
 
 
-let employees = [ghazi, lana, tamara, safi, omar, rana, hadi];
+// let employees = [ghazi, lana, tamara, safi, omar, rana, hadi];
 
 
-for (let i = 0; i < employees.length; i++) {
-    this.salary = employees[i].salary();
-}
+// for (let i = 0; i < allEmployees.length; i++) {
+//     this.salary = allEmployees[i].salary();
+// }
 
-for (let i = 0; i < employees.length; i++) {
-    employees[i].render();
+function renderAll() {
+    for (let i = 0; i < allEmployees.length; i++) {
+        allEmployees[i].render();
+    }
 }
 
 function idNumberGenerator() {
@@ -94,12 +90,9 @@ function idNumberGenerator() {
     return idNumber;
 }
 
+// let header = document.getElementById('headerID');
 
-
-let header = document.getElementById('headerID');
-
-let image = document.createElement('img');
-image
+// let image = document.createElement('img');
 
 formEl.addEventListener("submit", handleSubmit);
 
@@ -118,27 +111,29 @@ function handleSubmit(event) {
     // console.log(`Department: ${department} - Level: ${level}`);
 
     let newEmployee = new Employee(idNumber, fullName, department, level, imageURL);
-    console.log(newEmployee);
-    newEmployee.render();
     // console.log(newEmployee);
+    newEmployee.render();
+    // renderAll();
+    saveData([newEmployee]);
 }
 
+function saveData(data) {
+    let stringifyData = JSON.stringify(data);
+    localStorage.setItem('employees', stringifyData);
+}
 
-// ghazi.salary();
-// lana.salary();
-// tamara.salary();
-// safi.salary();
-// omar.salary();
-// rana.salary();
-// hadi.salary();
+function getData() {
+    let retrievedData = localStorage.getItem('employees');
+    let arrayData = JSON.parse(retrievedData);
+    if (arrayData != null) {
+        for (let i = 0; i < arrayData.length; i++) {
+            new Employee(arrayData[i].emplyeeID, arrayData[i].fullName, arrayData[i].department, arrayData[i].level, arrayData[i].imageURL);
+        }
+    } 
+    renderAll();
+}
 
-// ghazi.render();
-// lana.render();
-// tamara.render();
-// safi.render();
-// omar.render();
-// rana.render();
-// hadi.render();
+getData(); 
 
 
 
